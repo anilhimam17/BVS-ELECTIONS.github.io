@@ -1,0 +1,108 @@
+/* This file contains the CSS for all the normal layouts */
+
+.Heading {
+    font-size: 50px;
+    font-family: "rockwell";
+    text-align: center;
+}
+
+.Header {
+    border: 5px solid rgb(224, 224, 224);
+    background-color: cyan;
+    border-radius: 10px;
+    margin-bottom:50px;
+}
+
+.Admin {
+    margin-bottom:10px;
+}
+
+.label {
+    font-size: 30px;
+    font-family: "rockwell";
+    padding-right: 20px;
+}
+
+.form-group {
+    width: 500px;
+    height: 50px;
+}
+
+.text {
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "rockwell";
+}
+
+.submit {
+    padding:10px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "rockwell";
+    margin-bottom: 25px;
+}
+
+.submit:hover {
+    background-color: rgb(253, 216, 53);
+}
+
+a {
+    font-size:30px;
+    font-family: "rockwell";
+    padding:15px;
+}
+
+.normText {
+    font-size: 40px;
+    font-family: "rockwell";
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+table {
+    border-collapse: collapse;
+    width: 95%;
+    background-color: white;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    border: 5px solid rgb(224, 224, 224);
+    font-size: 30px;
+    font-family: "rockwell";
+}
+
+.vote {
+    display: inline-block;
+    border-radius: 4px;
+    width: 20%;
+    margin-bottom: 60px;
+}
+
+tr:hover {background-color:rgb(0, 255, 0);}

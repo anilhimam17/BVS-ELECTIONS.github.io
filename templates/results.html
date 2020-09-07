@@ -1,0 +1,70 @@
+{% extends "layoutAdmin.html" %}
+
+{% block title %}
+    RESULTS PAGE
+{% endblock %}
+
+{% block heading %}
+    ELECTION RESULTS
+{% endblock %}
+
+{% block nav %}
+    <li><a href="/setup">Enroll Candidate</a></li>
+    <li><a href="/remove">Remove Candidate</a></li>
+    <li><a href="/results">Election Results</a></li>
+    <li style="float: right;"><a href="/admin">Home</a></li>
+{% endblock %}
+
+{% block body %}
+    <!-- Table for results of elections -->
+    <center>
+        <u><h1 style="font-size: 40px; font-family: 'rockwell'; margin-bottom: 40px;">
+            Winning Candidates
+        </h1></u>
+
+        <table>
+            <!-- Heading of the table -->
+            <tr>
+                <th>Nominated Position</th>
+                <th>Status</th>
+                <th>Candidate Name</th>
+                <th>Votes Secured</th>
+            </tr>
+
+            <!-- Body of the table -->
+            {% for i in winners: %}
+                {% if i["len"] == 1: %}
+                    <tr>
+                        <td>{{ i["position"] }}</td>
+                        <td> Winner </td>
+                        <td>{{ i["name"] }}</td>
+                        <td>{{ i["votes"] }}</td>
+                    </tr>
+                {% elif i["len"] > 1: %}
+                    <tr>
+                        <td>{{ i["position"] }}</td>
+                        <td> Tied </td>
+                        <td>
+                            {% for j in i["name"]: %}
+                               - {{ j }}
+                            {% endfor %}
+                            -
+                        </td>
+                        <td>{{ i["votes"] }}</td>
+                    </tr>
+                {% else: %}
+                    <tr>
+                        <td>{{ i["position"] }}</td>
+                        <td> Not Determined </td>
+                        <td> - </td>
+                        <td> - </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+
+        </table>
+        <br><br>
+
+        <a href="/download"><button type="submit" class="form-group submit">Download Results</button></a>
+    </center>
+{% endblock %}

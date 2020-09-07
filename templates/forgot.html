@@ -1,0 +1,27 @@
+{% extends "layoutNormal.html" %}
+
+{% block title %}
+    FORGOT PASSWORD PAGE
+{% endblock %}
+
+{% block heading %}
+    FORGOT PASSWORD
+{% endblock %}
+
+{% block body %}
+    <!-- Form for storing the login credentials -->
+    <form action="/forgot" method="POST" style="text-align: center;">
+
+        <!-- Username -->
+        <input type="text" name="username" placeholder="USERNAME" class="form-group text">
+        <br><br>
+
+        <!-- Security Key -->
+        <input type="password" name="secKey" placeholder="SECURITY KEY" class="form-group text" autocomplete="off">
+        <br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Confirm" class="form-group submit">
+
+    </form>
+{% endblock %}

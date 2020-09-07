@@ -1,0 +1,39 @@
+{% extends "layoutAdmin.html" %}
+
+{% block title %}
+    SETUP PAGE
+{% endblock %}
+
+{% block heading %}
+    ENROLL CANDIDATE
+{% endblock %}
+
+{% block nav %}
+    <li><a href="/setup">Enroll Candidate</a></li>
+    <li><a href="/remove">Remove Candidate</a></li>
+    <li><a href="/results">Election Results</a></li>
+    <li style="float: right;"><a href="/admin">Home</a></li>
+{% endblock %}
+
+{% block body %}
+    <form action="/setup" method="POST" style="text-align: center;">
+
+        <!-- Position Selection -->
+        <label for="cPos" class="form-group label">Nominated Position</label><br><br>
+        <select name="cPos" style="display: inline-block; border-radius: 4px; box-sizing: border-box; width: 20%;">
+            <option selected>Select Position</option>
+            {% for i in pos: %}
+                <option> {{ i }} </option>
+            {% endfor %}
+        </select><br><br><br>
+
+        <!-- Name of the candidate -->
+        <label for="cName" class="form-group label">Candidate Name</label><br><br>
+        <input type="text" class="form-group text" name="cName" placeholder="Candidate Name">
+        <br><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Enroll" class="form-group submit">
+
+    </form>
+{% endblock %}

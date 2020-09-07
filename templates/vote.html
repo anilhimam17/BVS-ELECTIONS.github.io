@@ -1,0 +1,261 @@
+{% extends "layoutNormal.html" %}
+
+{% block title %}
+    VOTE PAGE
+{% endblock %}
+
+{% block heading %}
+    VOTE
+{% endblock %}
+
+{% block body %}
+    <form action="/vote" method="POST" style="text-align: center;">
+
+        <!-- Head Boy -->
+        <label for="lhb" class="label">Head Boy</label><br><br>
+        <select name="lhb" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Head Boy</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lhb: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Head Girl -->
+        <label for="lhg" class="label">Head Girl</label><br><br>
+        <select name="lhg" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Head Girl</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lhg: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Sports Captain -->
+        <label for="ls" class="label">Sports Captain</label><br><br>
+        <select name="ls" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Sports Captain</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in ls: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- ASST. Head Boy -->
+        <label for="lahb" class="label">ASST. Head Boy</label><br><br>
+        <select name="lahb" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select ASST. Head Boy</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lahb: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- ASST. Head Girl -->
+        <label for="lahg" class="label">ASST. Head Girl</label><br><br>
+        <select name="lahg" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select ASST. Head Girl</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lahg: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Seasurfers Captain -->
+        <label for="lss" class="label">Seasurfers Captain</label><br><br>
+        <select name="lss" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Seasurfers Captain</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lss: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Stormchasers Captain -->
+        <label for="lsc" class="label">Stormchasers Captain</label><br><br>
+        <select name="lsc" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Stormchasers Captain</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lsc: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Trailblazers Captain -->
+        <label for="ltb" class="label">Trailblazers Captain</label><br><br>
+        <select name="ltb" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Trailblazers Captain</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in ltb: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Terraformers Captain -->
+        <label for="ltf" class="label">Terraformers Captain</label><br><br>
+        <select name="ltf" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Terraformers Captain</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in ltf: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Cultural Secretary -->
+        <label for="lcs" class="label">Cultural Secretary</label><br><br>
+        <select name="lcs" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Cultural Secretary</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lcs: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Technical Head -->
+        <label for="lth" class="label">Technical Head</label><br><br>
+        <select name="lth" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Technical Head</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lth: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Creative Head -->
+        <label for="lch" class="label">Creative Head</label><br><br>
+        <select name="lch" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Creative Head</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lch: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Communications Head -->
+        <label for="lcom" class="label">Communications Head</label><br><br>
+        <select name="lcom" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Communications Head</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lcom: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Community Affairs Head -->
+        <label for="lcomaf" class="label">Community Affairs Head</label><br><br>
+        <select name="lcomaf" class="vote">
+
+            <!-- Default selected candidate -->
+            <option selected>Select Community Affairs Head</option>
+
+            <!-- For loop of all the candidates -->
+            {% for i in lcomaf: %}
+                <option> {{ i["name"] }} </option>
+            {% endfor %}
+
+            <!-- NOTA -->
+            <option> NOTA </option>
+
+        </select><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" class="form-group submit">
+
+    </form>
+
+    <!-- End Vote Button -->
+    <center>
+        <a href="/"><button type="submit" class="form-group submit">End Vote</button></a>
+    </center>
+{% endblock %}

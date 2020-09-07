@@ -1,0 +1,58 @@
+{% extends "layoutAdmin.html" %}
+
+{% block title %}
+    ADMIN PAGE
+{% endblock %}
+
+{% block heading %}
+    ADMINISTRATOR CONTROLS
+{% endblock %}
+
+{% block nav %}
+    <li><a href="/setup">Enroll Candidate</a></li>
+    <li><a href="/remove">Remove Candidate</a></li>
+    <li><a href="/results">Election Results</a></li>
+    <li style="float: right;"><a href="/logout">LOGOUT</a></li>
+{% endblock %}
+
+{% block body %}
+    <!-- Table for live statistics of the elections -->
+    <center>
+        <u><h1 style="font-size: 40px; font-family: 'rockwell'; margin-bottom: 40px;">
+            Standing Candidates
+        </h1></u>
+
+        <table>
+            <!-- Heading of the table -->
+            <tr>
+                <th>ID</th>
+                <th>Candidate Name</th>
+                <th>Nominated Position</th>
+                <th>Votes Secured</th>
+            </tr>
+
+            <!-- Body of the table -->
+            {% for i in nominees %}
+                <tr>
+                    <td>{{ i["id"] }}</td>
+                    <td>{{ i["name"] }}</td>
+                    <td>{{ i["position"] }}</td>
+                    <td>{{ i["votes"] }}</td>
+                </tr>
+            {% endfor %}
+
+            <!-- Footer of the table -->
+            <tr>
+                <b><td colspan="3"> Candidate Count </td></b>
+                <b><td> {{ nC }}</td></b>
+            </tr>
+
+        </table>
+        <br><br>
+
+        <a href="/reset"><button type="submit" class="form-group submit">Reset Election</button></a>
+        <a href="/resetVotes"><button type="submit" class="form-group submit">Reset Votes</button></a>
+    </center>
+{% endblock %}
+
+

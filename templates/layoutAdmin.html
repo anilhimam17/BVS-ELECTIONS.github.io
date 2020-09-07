@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BVS Elections: {% block title %}{% endblock %}</title>
+
+		<!-- The meta details of the website -->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='Styles.css') }}">
+	</head>
+
+	<!-- ---------------------------------------------------------------------------------------------- -->
+
+	<body style="background-color: rgb(179, 229, 252); margin: 20px;">
+		<!-- Heading of the website -->
+		<div class="Header Admin">
+			<h1 class="Heading">{% block heading %}{% endblock %}</h1>
+		</div>
+
+		<!-- Navigation bar for the website -->
+		<div style="margin-bottom: 100px;">
+			<ul>
+				{% block nav %}
+				{% endblock %}
+			</ul>
+		</div>
+
+		<!-- Body of the webpage -->
+		{% block body %}{% endblock %}
+
+		<!-- Footer of the webpage -->
+		<div style="padding-top: 50px;">
+			<em><h2 style="font-family: 'rockwell'; text-align: center;">
+				Project made by Godugu Anil Himam - Grade - 12 (Class of 2020)
+			</h2></em>
+		</div>
+	</body>
+
+	<!-- ---------------------------------------------------------------------------------------------- -->
+
+</html>
