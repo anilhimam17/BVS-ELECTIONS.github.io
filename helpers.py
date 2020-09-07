@@ -1,3 +1,8 @@
+'''
+Functools  normally comes installed with the default libraries
+incase it isnt installed please do the needfull
+'''
+
 from functools import wraps
 from flask import redirect, session
 

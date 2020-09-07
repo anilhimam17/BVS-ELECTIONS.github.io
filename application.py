@@ -1,3 +1,14 @@
+'''
+This file was pushed to GITHUB by anilhimam17
+Date: Sept 7th 2020
+
+To all the users using the software the libraries you need to download
+for this script to run are as follows:
+1) pip3 install flask
+2) pip3 install flask_session
+3) pip3 install cs50
+'''
+
 # All the dependencies required
 from flask import Flask, render_template, request, redirect, send_file, session
 from flask_session import Session
